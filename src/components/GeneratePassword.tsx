@@ -58,8 +58,10 @@ const GeneratePassword = ({
   };
 
   return (
-    <div>
-      <button onClick={GenerateRandomPassword}>Generate Password</button>
+    <div className="generate-btn">
+      <button onClick={GenerateRandomPassword} className="button-19">
+        Generate Password
+      </button>
     </div>
   );
 };

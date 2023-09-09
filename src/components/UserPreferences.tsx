@@ -12,8 +12,9 @@ const UserPreferences = ({
   };
   return (
     <div>
-      <label>
-        Password Length :<>{preferences.length}</>
+      Select Preferences :-
+      <label className="label-range">
+        <span className="pwd-length-range">Password Length</span>
         <input
           type="range"
           min={8}
@@ -22,8 +23,9 @@ const UserPreferences = ({
           value={preferences.length}
           onChange={onChangeHandler}
         />
+        <> {preferences.length}</>
       </label>
-      <>
+      <div className="user-preferences">
         <label>
           <input
             type="checkbox"
@@ -60,7 +62,7 @@ const UserPreferences = ({
           />
           Symbols
         </label>
-      </>
+      </div>
     </div>
   );
 };
