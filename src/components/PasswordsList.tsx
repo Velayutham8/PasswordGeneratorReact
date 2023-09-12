@@ -1,5 +1,4 @@
-import logo from "../assets/clipboard.png";
-import ticklogo from "../assets/greentick.png";
+import PasswordsListItem from "./PasswordListItem";
 
 const PasswordsList = ({ prevPasswords }: { prevPasswords: Array<string> }) => {
   return (
@@ -7,9 +6,9 @@ const PasswordsList = ({ prevPasswords }: { prevPasswords: Array<string> }) => {
       {prevPasswords &&
         prevPasswords.length > 0 &&
         prevPasswords.map((el, index) => (
-          <div className="pwd-list" key={index}>
-            {el}
-          </div>
+          <ul className="pwd-container" key={index}>
+            <PasswordsListItem el={el} />
+          </ul>
         ))}
     </div>
   );
